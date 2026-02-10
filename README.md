@@ -13,6 +13,22 @@ A fast and lightweight media player for macOS built with SwiftUI and AVFoundatio
 - **File Association**: Automatically opens supported media files when double-clicked
 - **Keyboard Shortcuts**: Full keyboard navigation support
 
+## Download
+
+### Latest Release
+Download the latest signed macOS build from the [Releases](https://github.com/mirozahorak/FastPlayer/releases) page.
+
+**FastPlayer v0.9** - Initial release with full media playback capabilities
+- ✅ Signed macOS application
+- ✅ Universal binary (Intel + Apple Silicon)
+- ✅ Ready to run - no installation required
+
+[⬇️ Download FastPlayer v0.9 for macOS](https://github.com/mirozahorak/FastPlayer/releases/download/v0.9/FastPlayer-v0.9-macOS.zip)
+
+### System Requirements
+- macOS 12.0 or later
+- Apple Silicon or Intel Mac
+
 ## Supported Formats
 
 ### Video Formats
@@ -43,7 +59,7 @@ A fast and lightweight media player for macOS built with SwiftUI and AVFoundatio
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/FastPlayer.git
+   git clone https://github.com/mirozahorak/FastPlayer.git
    cd FastPlayer
    ```
 
