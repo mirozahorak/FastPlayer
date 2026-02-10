@@ -14,34 +14,47 @@ struct SettingsView: View {
     @State private var selectedTab = 0
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            generalTab
+        ZStack {
+            TabView(selection: $selectedTab) {
+                ScrollView {
+                    generalTab
+                }
                 .tabItem {
                     Label("General", systemImage: "gear")
                 }
                 .tag(0)
-            
-            keyboardShortcutsTab
+                
+                ScrollView {
+                    keyboardShortcutsTab
+                }
                 .tabItem {
                     Label("Shortcuts", systemImage: "keyboard")
                 }
                 .tag(1)
-            
-            fileAssociationsTab
+                
+                ScrollView {
+                    fileAssociationsTab
+                }
                 .tabItem {
                     Label("File Types", systemImage: "doc")
                 }
                 .tag(2)
-            
-            aboutTab
+                
+                ScrollView {
+                    aboutTab
+                }
                 .tabItem {
                     Label("About", systemImage: "info.circle")
                 }
                 .tag(3)
-        }
-        .frame(width: 500, height: 400)
-        .onAppear {
-            updateCacheSize()
+            }
+            .frame(minWidth: 550, maxWidth: 550, minHeight: 550)
+            .onAppear {
+                updateCacheSize()
+            }
+            
+            // Invisible view to set window constraints
+            WindowConstraintSetter()
         }
     }
     
@@ -78,7 +91,7 @@ struct SettingsView: View {
             }
         }
         .formStyle(.grouped)
-        .padding()
+        .frame(maxWidth: .infinity)
     }
     
     private var keyboardShortcutsTab: some View {
@@ -113,7 +126,7 @@ struct SettingsView: View {
             }
         }
         .formStyle(.grouped)
-        .padding()
+        .frame(maxWidth: .infinity)
     }
     
     private var fileAssociationsTab: some View {
@@ -169,7 +182,7 @@ struct SettingsView: View {
             }
         }
         .formStyle(.grouped)
-        .padding()
+        .frame(maxWidth: .infinity)
     }
     
     private var aboutTab: some View {
@@ -218,11 +231,11 @@ struct SettingsView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal)
             
-            Spacer()
+            Spacer(minLength: 20)
             
             HStack {
                 Button {
-                    if let url = URL(string: "https://github.com/yourusername/FastPlayer") {
+                    if let url = URL(string: "https://github.com/mirozahorak/FastPlayer") {
                         NSWorkspace.shared.open(url)
                     }
                 } label: {
@@ -239,6 +252,7 @@ struct SettingsView: View {
             .padding(.horizontal)
         }
         .padding(.vertical)
+        .frame(maxWidth: .infinity)
     }
     
     private func updateCacheSize() {
@@ -269,6 +283,123 @@ struct ShortcutRow: View {
                 .padding(.vertical, 4)
                 .background(Color.gray.opacity(0.1))
                 .cornerRadius(4)
+        }
+    }
+}
+
+struct WindowConstraintSetter: NSViewRepresentable {
+    private static let fixedContentWidth: CGFloat = 550
+    private static let minimumHeight: CGFloat = 550
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
+
+    func makeNSView(context: Context) -> NSView {
+        let view = NSView()
+        view.isHidden = true
+        return view
+    }
+    
+    func updateNSView(_ nsView: NSView, context: Context) {
+        // Ensure the hosting window exists before applying constraints.
+        DispatchQueue.main.async {
+            if let window = nsView.window {
+                context.coordinator.attach(to: window)
+            }
+        }
+    }
+
+    final class Coordinator {
+        private weak var window: NSWindow?
+        private var resizeObserver: NSObjectProtocol?
+        private var liveResizeObserver: NSObjectProtocol?
+        private var closeObserver: NSObjectProtocol?
+
+        deinit {
+            detach()
+        }
+
+        func attach(to window: NSWindow) {
+            guard self.window !== window else {
+                applyConstraints(to: window)
+                return
+            }
+
+            detach()
+            self.window = window
+
+            resizeObserver = NotificationCenter.default.addObserver(
+                forName: NSWindow.didResizeNotification,
+                object: window,
+                queue: .main
+            ) { [weak self] notification in
+                guard let resizedWindow = notification.object as? NSWindow else { return }
+                self?.enforceFixedWidth(for: resizedWindow)
+            }
+
+            liveResizeObserver = NotificationCenter.default.addObserver(
+                forName: NSWindow.didEndLiveResizeNotification,
+                object: window,
+                queue: .main
+            ) { [weak self] notification in
+                guard let resizedWindow = notification.object as? NSWindow else { return }
+                self?.applyConstraints(to: resizedWindow)
+            }
+
+            closeObserver = NotificationCenter.default.addObserver(
+                forName: NSWindow.willCloseNotification,
+                object: window,
+                queue: .main
+            ) { [weak self] _ in
+                self?.detach()
+            }
+
+            applyConstraints(to: window)
+        }
+
+        private func applyConstraints(to window: NSWindow) {
+            window.styleMask.insert(.resizable)
+
+            let fixedContentWidth = WindowConstraintSetter.fixedContentWidth
+            let minimumHeight = WindowConstraintSetter.minimumHeight
+            let decorationWidth = window.frame.width - window.contentRect(forFrameRect: window.frame).width
+            let fixedFrameWidth = fixedContentWidth + decorationWidth
+
+            window.contentMinSize = NSSize(width: fixedContentWidth, height: minimumHeight)
+            window.contentMaxSize = NSSize(width: fixedContentWidth, height: CGFloat.greatestFiniteMagnitude)
+            window.minSize = NSSize(width: fixedFrameWidth, height: minimumHeight)
+            window.maxSize = NSSize(width: fixedFrameWidth, height: CGFloat.greatestFiniteMagnitude)
+
+            enforceFixedWidth(for: window)
+        }
+
+        private func enforceFixedWidth(for window: NSWindow) {
+            let fixedContentWidth = WindowConstraintSetter.fixedContentWidth
+            let decorationWidth = window.frame.width - window.contentRect(forFrameRect: window.frame).width
+            let fixedFrameWidth = fixedContentWidth + decorationWidth
+
+            guard abs(window.frame.width - fixedFrameWidth) > 0.5 else { return }
+
+            var frame = window.frame
+            frame.size.width = fixedFrameWidth
+            window.setFrame(frame, display: true)
+        }
+
+        private func detach() {
+            if let resizeObserver {
+                NotificationCenter.default.removeObserver(resizeObserver)
+                self.resizeObserver = nil
+            }
+            if let liveResizeObserver {
+                NotificationCenter.default.removeObserver(liveResizeObserver)
+                self.liveResizeObserver = nil
+            }
+            if let closeObserver {
+                NotificationCenter.default.removeObserver(closeObserver)
+                self.closeObserver = nil
+            }
+            window = nil
         }
     }
 }

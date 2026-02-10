@@ -16,24 +16,21 @@ A fast and lightweight media player for macOS built with SwiftUI and AVFoundatio
 ## Download
 
 ### Latest Release
-Download the latest signed macOS build from the [Releases](https://github.com/mirozahorak/FastPlayer/releases) page.
+Download the latest signed and notarized macOS build from the [Releases](https://github.com/mirozahorak/FastPlayer/releases) page.
 
-**FastPlayer v0.9** - Initial release with full media playback capabilities
-- ✅ Signed macOS application
+**FastPlayer v1.0.0** - Stable release with proper code signing and notarization
+- ✅ Signed with Developer ID certificate
+- ✅ Notarized by Apple for maximum security
 - ✅ Universal binary (Intel + Apple Silicon)
-- ✅ Ready to run - no installation required
+- ✅ Gatekeeper-compatible - runs without security warnings
 
-[⬇️ Download FastPlayer v0.9 for macOS](https://github.com/mirozahorak/FastPlayer/releases/download/v0.9/FastPlayer-v0.9-macOS.zip)
+[⬇️ Download FastPlayer v1.0.0 for macOS](https://github.com/mirozahorak/FastPlayer/releases/download/v1.0.0/FastPlayer-1.0.0.zip)
 
-### First-Time Installation
-**Important**: On first launch, macOS may show a security warning. To run FastPlayer:
-
-1. Right-click the downloaded `FastPlayer.app`
-2. Select "Open" from the context menu
-3. Click "Open" in the security dialog
-4. FastPlayer will now open normally
-
-Alternatively, you can temporarily allow apps from "App Store and identified developers" in System Settings → Privacy & Security.
+### Installation
+1. Download the `FastPlayer-1.0.0.zip` file from the link above
+2. Extract the zip file
+3. Drag `FastPlayer.app` to your Applications folder
+4. Double-click to launch - no security warnings required!
 
 ### System Requirements
 - macOS 12.0 or later

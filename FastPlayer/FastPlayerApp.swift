@@ -211,7 +211,8 @@ struct FastPlayerApp: App {
         .windowStyle(.titleBar)
         .windowToolbarStyle(.unified)
         .defaultPosition(.center)
-        .defaultSize(width: 500, height: 400)
+        .defaultSize(width: 550, height: 550)
+
         .restorationBehavior(.disabled)
     }
 }

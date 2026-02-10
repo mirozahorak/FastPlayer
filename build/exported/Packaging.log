@@ -1,0 +1,103 @@
+2026-02-10 14:03:35 +0000 [MT] Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x125772b40; archive(resolved)="<IDEArchive: 0x117992c40>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodDeveloperID: 0x159e07730>", team(resolved)="<IDEProvisioningBasicTeam: 0x11a59a930; teamID='V6373HMDL9', teamName='(null)'>">
+	Chain (12, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x125772b40; archive = "<IDEArchive: 0x117992c40>", distributionMethod="<IDEDistributionMethodDeveloperID: 0x159e07730>", team="<IDEProvisioningBasicTeam: 0x11a59a930; teamID='V6373HMDL9', teamName='(null)'>">
+	<IDEDistributionProcessingPipelineContext: 0x12570fd70; archive = "<IDEArchive: 0x117992c40>", distributionMethod="<IDEDistributionMethodDeveloperID: 0x159e07730>", team="<IDEProvisioningBasicTeam: 0x11a59a930; teamID='V6373HMDL9', teamName='(null)'>">
+	<IDEDistributionContext: 0x1257183d0; archive = "<IDEArchive: 0x117992c40>", distributionMethod="<IDEDistributionMethodDeveloperID: 0x159e07730>", team="<IDEProvisioningBasicTeam: 0x11a59a930; teamID='V6373HMDL9', teamName='(null)'>">
+	<IDEDistributionContext: 0x117a76060; archive = "<IDEArchive: 0x117992c40>", distributionMethod="<IDEDistributionMethodDeveloperID: 0x159e07730>", team="<IDEProvisioningBasicTeam: 0x11a59a930; teamID='V6373HMDL9', teamName='(null)'>">
+	<IDEDistributionContext: 0x11a5c54a0; archive = "<IDEArchive: 0x117992c40>", distributionMethod="<IDEDistributionMethodDeveloperID: 0x159e07730>", team="<IDEProvisioningBasicTeam: 0x11a59a930; teamID='V6373HMDL9', teamName='(null)'>">
+	<IDEDistributionContext: 0x13a107bd0; archive = "<IDEArchive: 0x117992c40>", distributionMethod="<IDEDistributionMethodDeveloperID: 0x159e07730>", team="<IDEProvisioningBasicTeam: 0x11a59a930; teamID='V6373HMDL9', teamName='(null)'>">
+	<IDEDistributionContext: 0x117a97f00; archive = "<IDEArchive: 0x117992c40>", distributionMethod="<IDEDistributionMethodDeveloperID: 0x159e07730>", team="<IDEProvisioningBasicTeam: 0x11a59a930; teamID='V6373HMDL9', teamName='(null)'>">
+	<IDEDistributionContext: 0x117a97bd0; archive = "<IDEArchive: 0x117992c40>", distributionMethod="<IDEDistributionMethodDeveloperID: 0x159e07730>", team="<IDEProvisioningBasicTeam: 0x11a59a930; teamID='V6373HMDL9', teamName='(null)'>">
+	<IDEDistributionContext: 0x117a91a20; archive = "<IDEArchive: 0x117992c40>", distributionMethod="<IDEDistributionMethodDeveloperID: 0x159e07730>", team="<IDEProvisioningBasicTeam: 0x11a59a930; teamID='V6373HMDL9', teamName='(null)'>">
+	<IDEDistributionContext: 0x117a90cc0; archive = "<IDEArchive: 0x117992c40>", distributionMethod="<IDEDistributionMethodDeveloperID: 0x159e07730>", team="(null)">
+	<IDEDistributionContext: 0x11a536990; archive = "<IDEArchive: 0x117992c40>", distributionMethod="<IDEDistributionMethodDeveloperID: 0x159e07730>", team="(null)">
+	<IDEDistributionContext: 0x1179943a0; archive = "<IDEArchive: 0x117992c40>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x125772b40>
+2026-02-10 14:03:35 +0000 [MT] Processing step: IDEDistributionCreateDestRootStep
+2026-02-10 14:03:35 +0000 [MT] Processing step: IDEDistributionCopyItemStep
+2026-02-10 14:03:35 +0000 [MT] Running /usr/bin/ditto '-V' '/Volumes/DEVEL/_SWIFT/FastPlayer/FastPlayer/build/FastPlayer.xcarchive/Products/Applications/FastPlayer.app' '/var/folders/tp/vq69kq9d5rv_s19mbbl4mpnw0000gn/T/XcodeDistPipeline.~~~sLrJj8/Root/Applications/FastPlayer.app'
+2026-02-10 14:03:35 +0000  >>> Copying /Volumes/DEVEL/_SWIFT/FastPlayer/FastPlayer/build/FastPlayer.xcarchive/Products/Applications/FastPlayer.app 
+2026-02-10 14:03:35 +0000  copying file ./Contents/_CodeSignature/CodeResources ... 
+2026-02-10 14:03:35 +0000  2200 bytes for ./Contents/_CodeSignature/CodeResources
+2026-02-10 14:03:35 +0000  copying file ./Contents/MacOS/FastPlayer ... 
+2026-02-10 14:03:35 +0000  767440 bytes for ./Contents/MacOS/FastPlayer
+2026-02-10 14:03:35 +0000  copying file ./Contents/Info.plist ... 
+2026-02-10 14:03:35 +0000  2962 bytes for ./Contents/Info.plist
+2026-02-10 14:03:35 +0000  copying file ./Contents/PkgInfo ... 
+2026-02-10 14:03:35 +0000  8 bytes for ./Contents/PkgInfo
+2026-02-10 14:03:35 +0000 [MT] /usr/bin/ditto exited with 0
+2026-02-10 14:03:35 +0000 [MT] Processing step: IDEDistributionEmbedProfileStep
+2026-02-10 14:03:35 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x11a59a8b0; bundleID='sk.misia.FastPlayer', path='<DVTFilePath:0x1179939e0:'/Volumes/DEVEL/_SWIFT/FastPlayer/FastPlayer/build/FastPlayer.xcarchive/Products/Applications/FastPlayer.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x15b037a40; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x1257246f0; name='Apple Development: Miroslav Zahorak (928ZCH8GS7)', hash='9D6249FB1756B7B91A2C4ECD198DA67E586BC78B', serialNumber='2C7A4C64A250AF52651083B32F9D540C', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-09-22 17:47:17 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+}', teamID='V6373HMDL9', identifier='sk.misia.FastPlayer', executablePath='<DVTFilePath:0x11a56ae90:'/Volumes/DEVEL/_SWIFT/FastPlayer/FastPlayer/build/FastPlayer.xcarchive/Products/Applications/FastPlayer.app/Contents/MacOS/FastPlayer'>', hardenedRuntime='1'>'>
+2026-02-10 14:03:35 +0000 [MT] Processing step: IDEDistributionInfoPlistStep
+2026-02-10 14:03:35 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2026-02-10 14:03:35 +0000 [MT] Processing step: IDEDistributionAppThinningPlistStep
+2026-02-10 14:03:35 +0000 [MT] Processing step: IDEDistributionSymbolsStep
+2026-02-10 14:03:35 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2026-02-10 14:03:35 +0000 [MT] Processing step: IDEDistributionAppThinningStep
+2026-02-10 14:03:35 +0000 [MT] Skipping step: IDEDistributionAppThinningStep because it said so
+2026-02-10 14:03:35 +0000 [MT] Processing step: IDEDistributionArchThinningStep
+2026-02-10 14:03:35 +0000 [MT] Archs to thin for item /Volumes/DEVEL/_SWIFT/FastPlayer/FastPlayer/build/FastPlayer.xcarchive/Products/Applications/FastPlayer.app are []
+2026-02-10 14:03:35 +0000 [MT] Processing step: IDEDistributionODRStep
+2026-02-10 14:03:35 +0000 [MT] Processing step: IDEDistributionStripXattrsStep
+2026-02-10 14:03:35 +0000 [MT] Skipping stripping extended attributes because the codesign step will strip them.
+2026-02-10 14:03:35 +0000 [MT] Processing step: IDEDistributionCodesignStep
+2026-02-10 14:03:35 +0000 [MT] Entitlements for <IDEDistributionItem: 0x11a59a8b0; bundleID='sk.misia.FastPlayer', path='<DVTFilePath:0x1179939e0:'/Volumes/DEVEL/_SWIFT/FastPlayer/FastPlayer/build/FastPlayer.xcarchive/Products/Applications/FastPlayer.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x15b037a40; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x12572e510; name='Apple Development: Miroslav Zahorak (928ZCH8GS7)', hash='9D6249FB1756B7B91A2C4ECD198DA67E586BC78B', serialNumber='2C7A4C64A250AF52651083B32F9D540C', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-09-22 17:47:17 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+}', teamID='V6373HMDL9', identifier='sk.misia.FastPlayer', executablePath='<DVTFilePath:0x11a56ae90:'/Volumes/DEVEL/_SWIFT/FastPlayer/FastPlayer/build/FastPlayer.xcarchive/Products/Applications/FastPlayer.app/Contents/MacOS/FastPlayer'>', hardenedRuntime='1'>'>: {
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+}
+2026-02-10 14:03:35 +0000 [MT] Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2026-02-10 14:03:35 +0000 [MT] Entitlements for <IDEDistributionItem: 0x11a59a8b0; bundleID='sk.misia.FastPlayer', path='<DVTFilePath:0x1179939e0:'/Volumes/DEVEL/_SWIFT/FastPlayer/FastPlayer/build/FastPlayer.xcarchive/Products/Applications/FastPlayer.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x15b037a40; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x11b814880; name='Apple Development: Miroslav Zahorak (928ZCH8GS7)', hash='9D6249FB1756B7B91A2C4ECD198DA67E586BC78B', serialNumber='2C7A4C64A250AF52651083B32F9D540C', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-09-22 17:47:17 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+}', teamID='V6373HMDL9', identifier='sk.misia.FastPlayer', executablePath='<DVTFilePath:0x11a56ae90:'/Volumes/DEVEL/_SWIFT/FastPlayer/FastPlayer/build/FastPlayer.xcarchive/Products/Applications/FastPlayer.app/Contents/MacOS/FastPlayer'>', hardenedRuntime='1'>'> are: {
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+}
+2026-02-10 14:03:35 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x11a59a8b0; bundleID='sk.misia.FastPlayer', path='<DVTFilePath:0x1179939e0:'/Volumes/DEVEL/_SWIFT/FastPlayer/FastPlayer/build/FastPlayer.xcarchive/Products/Applications/FastPlayer.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x15b037a40; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x1179a1830; name='Apple Development: Miroslav Zahorak (928ZCH8GS7)', hash='9D6249FB1756B7B91A2C4ECD198DA67E586BC78B', serialNumber='2C7A4C64A250AF52651083B32F9D540C', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-09-22 17:47:17 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+}', teamID='V6373HMDL9', identifier='sk.misia.FastPlayer', executablePath='<DVTFilePath:0x11a56ae90:'/Volumes/DEVEL/_SWIFT/FastPlayer/FastPlayer/build/FastPlayer.xcarchive/Products/Applications/FastPlayer.app/Contents/MacOS/FastPlayer'>', hardenedRuntime='1'>'> to: /var/folders/tp/vq69kq9d5rv_s19mbbl4mpnw0000gn/T/XcodeDistPipeline.~~~sLrJj8/entitlements~~~oHbV65
+2026-02-10 14:03:35 +0000 [MT] invoking codesign: <NSConcreteTask: 0x12572ee20; launchPath='/usr/bin/codesign', arguments='(
+    "-f",
+    "-s",
+    319E67E39D49B04467FF362FD914407FC79A6BCB,
+    "--entitlements",
+    "/var/folders/tp/vq69kq9d5rv_s19mbbl4mpnw0000gn/T/XcodeDistPipeline.~~~sLrJj8/entitlements~~~oHbV65",
+    "--requirements",
+    "=designated => anchor apple generic  and identifier \"$self.identifier\" and ((cert leaf[field.1.2.840.113635.100.6.1.9] exists) or ( certificate 1[field.1.2.840.113635.100.6.2.6] exists and certificate leaf[field.1.2.840.113635.100.6.1.13] exists  and certificate leaf[subject.OU] = \"V6373HMDL9\" ))",
+    "--preserve-metadata=identifier,flags,runtime,launch-constraints,library-constraints",
+    "--generate-entitlement-der",
+    "--strip-disallowed-xattrs",
+    "-vvv",
+    "/var/folders/tp/vq69kq9d5rv_s19mbbl4mpnw0000gn/T/XcodeDistPipeline.~~~sLrJj8/Root/Applications/FastPlayer.app"
+)'>
+2026-02-10 14:03:43 +0000 [MT] codesign output: /var/folders/tp/vq69kq9d5rv_s19mbbl4mpnw0000gn/T/XcodeDistPipeline.~~~sLrJj8/Root/Applications/FastPlayer.app: replacing existing signature
+/var/folders/tp/vq69kq9d5rv_s19mbbl4mpnw0000gn/T/XcodeDistPipeline.~~~sLrJj8/Root/Applications/FastPlayer.app: signed app bundle with Mach-O universal (x86_64 arm64) [sk.misia.FastPlayer]
+2026-02-10 14:03:43 +0000 [MT] Processing step: IDEDistributionZipODRItemStep
+2026-02-10 14:03:43 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2026-02-10 14:03:43 +0000 [MT] Processing step: IDEDistributionSkipPackagingStep
+2026-02-10 14:03:43 +0000 [MT] Processing step: IDEDistributionAppStoreInformationStep
+2026-02-10 14:03:43 +0000 [MT] Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2026-02-10 14:03:43 +0000 [MT] Processing step: IDEDistributionGenerateProcessedDistributionItems
+2026-02-10 14:03:43 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x12571f730:'/var/folders/tp/vq69kq9d5rv_s19mbbl4mpnw0000gn/T/XcodeDistPipeline.~~~sLrJj8/Root/Applications/FastPlayer.app'>
+2026-02-10 14:03:43 +0000 [MT] [OPTIONAL] Didn't find embedded provisioning profile for <DVTFilePath:0x12571f730:'/var/folders/tp/vq69kq9d5rv_s19mbbl4mpnw0000gn/T/XcodeDistPipeline.~~~sLrJj8/Root/Applications/FastPlayer.app'>: Error Domain=NSCocoaErrorDomain Code=4 "No file at <DVTFilePath:0x12571de70:'/var/folders/tp/vq69kq9d5rv_s19mbbl4mpnw0000gn/T/XcodeDistPipeline.~~~sLrJj8/Root/Applications/FastPlayer.app/Contents/embedded.provisionprofile'>" UserInfo={NSLocalizedDescription=No file at <DVTFilePath:0x12571de70:'/var/folders/tp/vq69kq9d5rv_s19mbbl4mpnw0000gn/T/XcodeDistPipeline.~~~sLrJj8/Root/Applications/FastPlayer.app/Contents/embedded.provisionprofile'>}
+2026-02-10 14:03:43 +0000 [MT] Processing step: IDEDistributionCreateManifestStep
+2026-02-10 14:03:43 +0000 [MT] Skipping step: IDEDistributionCreateManifestStep because it said so
