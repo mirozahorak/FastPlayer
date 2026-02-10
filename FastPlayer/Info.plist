@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>mp4</string>
+				<string>m4v</string>
+				<string>mov</string>
+				<string>avi</string>
+				<string>mkv</string>
+				<string>wmv</string>
+				<string>flv</string>
+				<string>webm</string>
+			</array>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>video/mp4</string>
+				<string>video/quicktime</string>
+				<string>video/x-msvideo</string>
+				<string>video/x-matroska</string>
+				<string>video/x-ms-wmv</string>
+				<string>video/x-flv</string>
+				<string>video/webm</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Movie files</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>mp3</string>
+				<string>aac</string>
+				<string>wav</string>
+				<string>flac</string>
+				<string>m4a</string>
+				<string>ogg</string>
+				<string>wma</string>
+			</array>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>audio/mpeg</string>
+				<string>audio/aac</string>
+				<string>audio/wav</string>
+				<string>audio/x-flac</string>
+				<string>audio/mp4</string>
+				<string>audio/ogg</string>
+				<string>audio/x-ms-wma</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Audio files</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+		</dict>
+	</array>
+</dict>
+</plist>
