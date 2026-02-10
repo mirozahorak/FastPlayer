@@ -18,16 +18,18 @@ A fast and lightweight media player for macOS built with SwiftUI and AVFoundatio
 ### Latest Release
 Download the latest signed and notarized macOS build from the [Releases](https://github.com/mirozahorak/FastPlayer/releases) page.
 
-**FastPlayer v1.0.0** - Stable release with proper code signing and notarization
+**FastPlayer v1.0.1** - Latest release with updated icon and improved settings window
 - ✅ Signed with Developer ID certificate
 - ✅ Notarized by Apple for maximum security
 - ✅ Universal binary (Intel + Apple Silicon)
 - ✅ Gatekeeper-compatible - runs without security warnings
+- 🆕 New app icon with multiple resolutions
+- 🆕 Improved settings window with fixed width and better scrolling
 
-[⬇️ Download FastPlayer v1.0.0 for macOS](https://github.com/mirozahorak/FastPlayer/releases/download/v1.0.0/FastPlayer-1.0.0.zip)
+[⬇️ Download FastPlayer v1.0.1 for macOS](https://github.com/mirozahorak/FastPlayer/releases/download/v1.0.1/FastPlayer-1.0.1.zip)
 
 ### Installation
-1. Download the `FastPlayer-1.0.0.zip` file from the link above
+1. Download the `FastPlayer-1.0.1.zip` file from the link above
 2. Extract the zip file
 3. Drag `FastPlayer.app` to your Applications folder
 4. Double-click to launch - no security warnings required!
@@ -55,6 +57,24 @@ Download the latest signed and notarized macOS build from the [Releases](https:/
 - OGG (.ogg)
 - Windows Media Audio (.wma)
 - AIFF (.aiff)
+
+## Changelog
+
+### v1.0.1 (2026-02-10)
+- **New App Icon**: Complete icon redesign with multiple resolutions for crisp display on all devices
+- **Improved Settings Window**: 
+  - Fixed width at 550px (non-resizable horizontally)
+  - Height remains resizable with minimum 550px
+  - Added ScrollView to all tabs for proper content adaptation
+  - Implemented WindowConstraintSetter for precise window size control
+- **Technical Improvements**: Enhanced window management using NSViewRepresentable
+
+### v1.0.0 (2026-02-10)
+- Initial stable release with proper code signing and notarization
+- Signed with Developer ID certificate
+- Notarized by Apple for maximum security
+- Universal binary support (Intel + Apple Silicon)
+- Gatekeeper-compatible
 
 ## Installation
 
