@@ -25,6 +25,16 @@ Download the latest signed macOS build from the [Releases](https://github.com/mi
 
 [⬇️ Download FastPlayer v0.9 for macOS](https://github.com/mirozahorak/FastPlayer/releases/download/v0.9/FastPlayer-v0.9-macOS.zip)
 
+### First-Time Installation
+**Important**: On first launch, macOS may show a security warning. To run FastPlayer:
+
+1. Right-click the downloaded `FastPlayer.app`
+2. Select "Open" from the context menu
+3. Click "Open" in the security dialog
+4. FastPlayer will now open normally
+
+Alternatively, you can temporarily allow apps from "App Store and identified developers" in System Settings → Privacy & Security.
+
 ### System Requirements
 - macOS 12.0 or later
 - Apple Silicon or Intel Mac
